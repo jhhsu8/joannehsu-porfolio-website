@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-0 col-sm-3" id="sidebar">
+            <div id="bar">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9" id="banner">
+                    <h1>Joanne Hsu</h1>
+                    <p id="joanne">
+                        <i class="fa fa-phone" aria-hidden="true"></i> (925) 876-2830<br>
+                        <i class="fa fa-envelope" aria-hidden="true"></i> jhhsu11@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9 col-sm-9" id="references">
+                    <h2>Reference Letters</h2>
+                    <p><input type="button" id="previousButton" name="previousButton" value="&larr; Back" ng-click="previous()" ng-class="{'disabledButton': previousButton}" ng-disabled="previousButton"><input type="button" id="nextButton" name="nextButton" value="Next &rarr;" ng-click="next()" ng-class="{'disabledButton': nextButton}" ng-disabled="nextButton"></p>
+                    <p>{{current_reference.id + 1}} / {{references.length}}</p>
+                    <p class="quote">"{{current_reference.quote}}"</p>
+                    <p>-{{current_reference.name}}</p>
+                    <p class="embed-responsive embed-responsive-size"><iframe class="embed-responsive-item" ng-src="{{current_reference.url | trusted}}" title="{{current_reference.name}}"></iframe></p>
+                    <p id="backtotop"><a href="" ng-click="gotoElement('banner')">Back to Top</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-9" id="footer">
+                    <p>&copy; {{date| date:'yyyy'}} Joanne Hsu<br>
+                        (Images are from Google search)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
